@@ -5,6 +5,8 @@ import org.example.model.Signature;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,6 +29,8 @@ public class PetitionService {
     }
 
     public void addPetition(Petition petition) {
+        petition.setCreatedDate(LocalDate.now());
+        petition.setClosingDate(petition.getCreatedDate().plusWeeks(2));
         petitions.add(petition);
     }
 

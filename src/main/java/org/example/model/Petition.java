@@ -37,7 +37,15 @@ public class Petition implements Serializable {
 
     public LocalDate getCreatedDate() { return createdDate; }
 
+    public void setCreatedDate(LocalDate createdDate) {
+        this.createdDate = createdDate;
+    }
+
     public LocalDate getClosingDate() { return  closingDate; }
+
+    public void setClosingDate(LocalDate closingDate) {
+        this.closingDate = closingDate;
+    }
 
     public List<Signature> getSignatures() { return signatures; }
     public void setSignatures(List<Signature> signatures) { this.signatures = signatures; }
