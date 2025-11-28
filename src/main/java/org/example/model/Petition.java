@@ -1,6 +1,7 @@
 package org.example.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +9,8 @@ public class Petition implements Serializable {
     private int id;
     private String title;
     private String description;
+    private LocalDate createdDate;
+    private LocalDate closingDate;
     private List<Signature> signatures = new ArrayList<>();
 
     public Petition() {}
@@ -16,6 +19,8 @@ public class Petition implements Serializable {
         this.id = id;
         this.title = title;
         this.description = description;
+        this.createdDate = LocalDate.now();
+        this.closingDate = createdDate.plusMonths(2);
     }
 
     // Getters and setters
@@ -27,6 +32,10 @@ public class Petition implements Serializable {
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    public LocalDate getCreatedDate() { return createdDate; }
+
+    public LocalDate getClosingDate() { return  closingDate; }
 
     public List<Signature> getSignatures() { return signatures; }
     public void setSignatures(List<Signature> signatures) { this.signatures = signatures; }
