@@ -14,8 +14,8 @@ public class PetitionService {
 
     @PostConstruct
     public void init() {
-        petitions.add(new Petition(1, "Save the Park", "Protect our local park from development"));
-        petitions.add(new Petition(2, "Improve Public Transport", "Request more buses in the city"));
+        petitions.add(new Petition("Save the Park", "Protect our local park from development"));
+        petitions.add(new Petition("Improve Public Transport", "Request more buses in the city"));
     }
 
     public List<Petition> getAll() {
@@ -27,7 +27,6 @@ public class PetitionService {
     }
 
     public void addPetition(Petition petition) {
-        petition.setId(petitions.size() + 1);
         petitions.add(petition);
     }
 

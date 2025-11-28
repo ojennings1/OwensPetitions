@@ -16,13 +16,13 @@ public class MyController {
 
     // Pre-populate with some petitions
     public MyController() {
-        petitions.add(new Petition(1, "Save Bushy Park", "Protect Bushy Park from development"));
-        petitions.add(new Petition(2, "Improve Public Transport", "Request more buses in the city"));
-        petitions.add(new Petition(3, "Galway Ring Road", "Build a ring road around the city to reduce congestion"));
-        petitions.add(new Petition(4, "Less Tourist Shops", "More normal shops for locals in the city centre"));
-        petitions.add(new Petition(5, "More Houses", "Build more affordable houses"));
-        petitions.add(new Petition(5, "Rent Freeze", "Put a stop to extortionate rent increases"));
-        petitions.add(new Petition(5, "Safer Active Travel Options", "More cycle lanes"));
+        petitions.add(new Petition("Save Bushy Park", "Protect Bushy Park from development"));
+        petitions.add(new Petition("Improve Public Transport", "Request more buses in the city"));
+        petitions.add(new Petition("Galway Ring Road", "Build a ring road around the city to reduce congestion"));
+        petitions.add(new Petition("Less Tourist Shops", "More normal shops for locals in the city centre"));
+        petitions.add(new Petition("More Houses", "Build more affordable houses"));
+        petitions.add(new Petition("Rent Freeze", "Put a stop to extortionate rent increases"));
+        petitions.add(new Petition("Safer Active Travel Options", "More cycle lanes"));
     }
 
     @GetMapping("/")

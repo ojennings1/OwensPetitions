@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Petition implements Serializable {
+    private static int counter = 1;
+
     private int id;
     private String title;
     private String description;
@@ -15,8 +17,8 @@ public class Petition implements Serializable {
 
     public Petition() {}
 
-    public Petition(int id, String title, String description) {
-        this.id = id;
+    public Petition(String title, String description) {
+        this.id = counter++;
         this.title = title;
         this.description = description;
         this.createdDate = LocalDate.now();
