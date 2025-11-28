@@ -21,6 +21,7 @@ public class MyController {
         petitions.add(new Petition(3, "Galway Ring Road", "Build a ring road around the city to reduce congestion"));
         petitions.add(new Petition(4, "Less Tourist Shops", "More normal shops for locals in the city centre"));
         petitions.add(new Petition(5, "More Houses", "Build more affordable houses"));
+        petitions.add(new Petition(5, "Rent Freeze", "Put a stop to extortionate rent increases"));
     }
 
     @GetMapping("/")
