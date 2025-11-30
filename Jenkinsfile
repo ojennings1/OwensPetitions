@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('GetProject') {
             steps {
                 git 'https://github.com/ojennings1/OwensPetitions.git'
             }
