@@ -3,7 +3,7 @@
 <html>
 <head><title>Knocknacarra Community Webpage</title></head>
 <body>
-<h1>Welcome to Knocknacarra Community Webpage</h1>
+<h1>Welcome to Knocknacarra and Salthill Community Webpage</h1>
 <nav>
     <a href="/owenspetitions/create">Create Petition</a> |
     <a href="/owenspetitions/view">View Petitions</a> |
