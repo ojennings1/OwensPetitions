@@ -10,33 +10,31 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "mvn clean compile"
+                sh 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                sh "mvn test"
+                sh 'mvn test'
             }
         }
 
         stage('Package') {
             steps {
-                sh "mvn package"
+                sh 'mvn package'
+                archiveArtifacts artifacts: 'target/owenspetitions.war', fingerprint: true
             }
         }
 
-        // Run the JAR in background so Jenkins doesn’t hang as has been happening
-        stage('Run') {
+        stage('Deploy') {
             steps {
-                sh "nohup java -jar target/OwensPetitions-1.0-SNAPSHOT.jar &"
+                input message: 'Deploy to EC2?'
+                sh '''
+                scp -i /home/ubuntu/lab3-jenkins-key.pem target/owenspetitions.war ubuntu@100.24.240.180:/home/ubuntu/
+                ssh -i /home/ubuntu/lab3-jenkins-key.pem ubuntu@100.24.240.180 "sudo cp /home/ubuntu/owenspetitions.war /var/lib/tomcat10/webapps/"
+                '''
             }
-        }
-    }
-
-    post {
-        success {
-            archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
         }
     }
 }
