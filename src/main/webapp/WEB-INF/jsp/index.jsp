@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
-<head><title>Knocknacarra and Salthill Community Webpage</title></head>
+<head><title>Knocknacarra Community Webpage</title></head>
 <body>
 <h1>Welcome to Knocknacarra Community Webpage</h1>
 <nav>
