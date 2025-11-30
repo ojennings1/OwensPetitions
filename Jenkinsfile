@@ -29,7 +29,6 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                input message: 'Deploy to EC2?'
                 sshagent(['ec2-key']) {
                     sh '''
                         scp target/owenspetitions.war ubuntu@100.24.240.180:/home/ubuntu/
