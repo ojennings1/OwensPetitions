@@ -30,9 +30,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                    cp target/owenspetitions.war /home/ubuntu/
                     sudo rm -rf /var/lib/tomcat10/webapps/owenspetitions
-                    sudo cp /home/ubuntu/owenspetitions.war /var/lib/tomcat10/webapps/
+                    sudo cp target/owenspetitions.war /var/lib/tomcat10/webapps/
                     sudo systemctl restart tomcat10
                 '''
             }
