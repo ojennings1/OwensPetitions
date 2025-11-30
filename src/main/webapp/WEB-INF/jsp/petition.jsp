@@ -14,12 +14,12 @@
 </ul>
 
 <h2>Add Your Signature</h2>
-<form action="/petition/${petition.id}/sign" method="post">
+<form action="/owenspetitions/petition/${petition.id}/sign" method="post">
     <label>Name: <input type="text" name="name"/></label><br/>
     <label>Email: <input type="text" name="email"/></label><br/>
     <button type="submit">Sign Petition</button>
 </form>
 
-<a href="/view">Back to Petitions</a>
+<a href="/owenspetitions/view">Back to Petitions</a>
 </body>
 </html>

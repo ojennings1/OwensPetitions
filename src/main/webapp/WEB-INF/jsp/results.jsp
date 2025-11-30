@@ -7,11 +7,11 @@
 <ul>
     <c:forEach var="petition" items="${results}">
         <li>
-            <a href="/petition/${petition.id}">${petition.title}</a>
+            <a href="/owenspetitions/petition/${petition.id}">${petition.title}</a>
             - ${petition.description}
         </li>
     </c:forEach>
 </ul>
-<a href="/search">Back to Search</a>
+<a href="/owenspetitions/search">Back to Search</a>
 </body>
 </html>

@@ -14,7 +14,7 @@
     </tr>
     <c:forEach var="petition" items="${petitions}">
         <tr>
-            <td><a href="/petition/${petition.id}">${petition.title}</a></td>
+            <td><a href="/owenspetitions/petition/${petition.id}">${petition.title}</a></td>
             <td>${petition.description}</td>
             <td>${petition.createdDate}</td>
             <td>${petition.closingDate}</td>
@@ -22,6 +22,6 @@
     </c:forEach>
  </table>
  <br>
-<a href="/">Back to Home</a>
+<a href="/owenspetitions/">Back to Home</a>
 </body>
 </html>

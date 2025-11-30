@@ -3,10 +3,10 @@
 <head><title>Search Petitions</title></head>
 <body>
 <h1>Search Petitions</h1>
-<form action="/search" method="post">
+<form action="/owenspetitions/search" method="post">
     <label>Keyword: <input type="text" name="keyword"/></label>
     <button type="submit">Search</button>
 </form>
-<a href="/">Back to Home</a>
+<a href="/owenspetitions/">Back to Home</a>
 </body>
 </html>
