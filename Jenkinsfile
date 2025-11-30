@@ -32,10 +32,13 @@ pipeline {
                 input message: 'Deploy to EC2?'
                 sshagent(['ec2-key']) {
                     sh '''
-                    scp target/owenspetitions.war ubuntu@100.24.240.180:/home/ubuntu/
-                    ssh ubuntu@100.24.240.180 "sudo cp /home/ubuntu/owenspetitions.war /var/lib/tomcat10/webapps/"
+                        scp target/owenspetitions.war ubuntu@100.24.240.180:/home/ubuntu/
+                        ssh ubuntu@100.24.240.180 "sudo rm -rf /var/lib/tomcat10/webapps/owenspetitions"
+                        ssh ubuntu@100.24.240.180 "sudo cp /home/ubuntu/owenspetitions.war /var/lib/tomcat10/webapps/"
+                        ssh ubuntu@100.24.240.180 "sudo systemctl restart tomcat10"
                     '''
                 }
+            }
         }
     }
 }
