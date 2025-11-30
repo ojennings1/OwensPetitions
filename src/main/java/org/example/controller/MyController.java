@@ -14,7 +14,6 @@ public class MyController {
 
     private List<Petition> petitions = new ArrayList<>();
 
-    // Pre-populate with some petitions
     public MyController() {
         petitions.add(new Petition("Save Bushy Park", "Protect Bushy Park from development"));
         petitions.add(new Petition("Improve Public Transport", "Request more buses in the city"));
